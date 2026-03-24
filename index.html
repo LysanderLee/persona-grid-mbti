@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Tes gaya kepribadian 16 tipe dengan 56 pertanyaan untuk refleksi diri, lengkap dengan hasil personal, FAQ, dan informasi tentang platform."
+    />
+    <meta name="theme-color" content="#f3f1ec" />
+    <meta property="og:title" content="Persona Grid — Tes Gaya Kepribadian" />
+    <meta
+      property="og:description"
+      content="Kenali kecenderungan gaya kepribadianmu lewat 56 pernyataan reflektif yang terinspirasi dari pendekatan MBTI."
+    />
+    <meta property="og:type" content="website" />
+    <title>Persona Grid — Tes Gaya Kepribadian</title>
+    <link rel="icon" type="image/svg+xml" href="assets/logo-mark.svg" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="background-orb orb-one"></div>
+    <div class="background-orb orb-two"></div>
+    <div class="background-grid"></div>
+
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#introScreen" aria-label="Persona Grid">
+          <img src="assets/logo.svg" alt="Logo Persona Grid" class="brand-logo" />
+        </a>
+
+        <nav class="site-nav" aria-label="Navigasi utama">
+          <a href="#introScreen">Beranda</a>
+          <a href="#aboutSection">Tentang</a>
+          <a href="#faqSection">FAQ</a>
+        </nav>
+
+        <div class="topbar-actions">
+          <button class="ghost-button" id="restartTopButton" type="button">Reset</button>
+        </div>
+      </header>
+
+      <main class="main-content">
+        <section class="hero screen active" id="introScreen" aria-labelledby="heroTitle">
+          <div class="hero-copy glass-card">
+            <div>
+              <div class="eyebrow">MBTI-inspired personality test</div>
+              <h1 id="heroTitle">Tes gaya kepribadian untuk memahami cara kamu berpikir, bekerja, dan berinteraksi.</h1>
+              <p class="hero-text">
+                Persona Grid memakai <strong>56 pernyataan</strong> yang dibagi seimbang ke empat dimensi:
+                energi sosial, cara memproses informasi, gaya mengambil keputusan, dan preferensi struktur.
+              </p>
+
+              <div class="hero-points">
+                <div class="hero-point">
+                  <img src="assets/logo-mark.svg" alt="Ikon sistem skor" />
+                  <span>Skor seimbang per dimensi untuk membaca kecenderungan personal secara lebih stabil.</span>
+                </div>
+                <div class="hero-point">
+                  <img src="assets/badge-spectrum.svg" alt="Ikon tampilan hasil" />
+                  <span>Hasil akhir menampilkan 16 tipe, distribusi skor, gaya kerja, dan gaya komunikasi.</span>
+                </div>
+                <div class="hero-point">
+                  <img src="assets/badge-compass.svg" alt="Ikon progress" />
+                  <span>Format satu per satu dirancang agar kamu bisa menjawab dengan lebih fokus dan reflektif.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero-actions">
+              <button class="primary-button" id="startButton" type="button">Mulai Tes</button>
+              <p class="helper-text">Estimasi pengerjaan 7–10 menit. Tidak ada jawaban benar atau salah.</p>
+            </div>
+          </div>
+
+          <aside class="hero-panel glass-card">
+            <div class="panel-head">
+              <span class="panel-label">Yang akan kamu dapat</span>
+              <span class="panel-badge">16 Tipe</span>
+            </div>
+
+            <div class="metric-grid">
+              <article class="metric-card">
+                <span class="metric-label">Pertanyaan</span>
+                <strong class="metric-value">56</strong>
+              </article>
+              <article class="metric-card">
+                <span class="metric-label">Dimensi</span>
+                <strong class="metric-value">4</strong>
+              </article>
+              <article class="metric-card">
+                <span class="metric-label">Skala</span>
+                <strong class="metric-value">1–5</strong>
+              </article>
+              <article class="metric-card">
+                <span class="metric-label">Mode</span>
+                <strong class="metric-value">Reflektif</strong>
+              </article>
+            </div>
+
+            <div class="dimension-list">
+              <div class="dimension-item">
+                <span class="dimension-icon dimension-ei">E / I</span>
+                <div>
+                  <strong>Energi sosial</strong>
+                  <p>Apakah kamu lebih recharge dari interaksi atau dari ruang pribadi?</p>
+                </div>
+              </div>
+              <div class="dimension-item">
+                <span class="dimension-icon dimension-sn">S / N</span>
+                <div>
+                  <strong>Pemrosesan informasi</strong>
+                  <p>Apakah kamu cenderung fokus pada fakta konkret atau pola besar?</p>
+                </div>
+              </div>
+              <div class="dimension-item">
+                <span class="dimension-icon dimension-tf">T / F</span>
+                <div>
+                  <strong>Pengambilan keputusan</strong>
+                  <p>Apakah kamu lebih menekankan logika objektif atau nilai dan perasaan?</p>
+                </div>
+              </div>
+              <div class="dimension-item">
+                <span class="dimension-icon dimension-jp">J / P</span>
+                <div>
+                  <strong>Gaya kerja</strong>
+                  <p>Apakah kamu lebih tenang dengan struktur atau fleksibilitas?</p>
+                </div>
+              </div>
+            </div>
+
+            <p class="mini-note">
+              Catatan: ini adalah <strong>alat refleksi diri</strong> yang terinspirasi dari MBTI, bukan alat diagnosis psikologis klinis.
+            </p>
+          </aside>
+        </section>
+
+        <section class="site-section" id="aboutSection" aria-labelledby="aboutTitle">
+          <div class="site-section-grid">
+            <article class="site-copy glass-card">
+              <div class="eyebrow">Tentang Persona Grid</div>
+              <h2 id="aboutTitle" class="section-title">Platform refleksi diri untuk mengenali kecenderungan personal secara lebih dekat.</h2>
+              <p>
+                Persona Grid adalah web tes gaya kepribadian yang dirancang untuk membantu pengguna memahami cara mereka
+                berinteraksi, mengambil keputusan, memproses informasi, dan membangun ritme kerja sehari-hari.
+              </p>
+              <p>
+                Tes ini memakai 56 pernyataan reflektif yang dibagi secara seimbang ke empat dimensi utama. Hasilnya
+                ditampilkan dalam format yang ringkas, mudah dipahami, dan bisa menjadi titik awal untuk mengenali pola diri.
+              </p>
+              <p>
+                Kami percaya bahwa tes kepribadian paling berguna ketika dipakai sebagai alat refleksi, bukan sebagai label mutlak.
+                Karena itu, Persona Grid dibuat untuk memberi gambaran kecenderungan, bukan menentukan identitas seseorang secara final.
+              </p>
+            </article>
+
+            <div class="site-side">
+              <article class="info-card glass-card">
+                <div class="eyebrow">Owner</div>
+                <h3>Nama owner / brand</h3>
+                <p>
+                  Halo! Aku, <strong>Lysander Lee</strong>, kreator di balik Persona Grid. Website ini lahir dari ketertarikan pada bagaimana orang memahami dirinya sendiri, berkomunikasi, dan menemukan pola yang sering tidak mereka sadari. Lewat Persona Grid, aku ingin membuat pengalaman tes kepribadian yang terasa lebih hangat, lebih rapi, dan lebih menyenangkan untuk dijelajahi.
+                </p>
+              </article>
+
+              <article class="info-card glass-card">
+                <div class="eyebrow">Kontak</div>
+                <h3>Hubungi kami</h3>
+                <ul class="plain-list">
+                  <li>Email: lysanderlee06@gmail.com</li>
+                  <li>Instagram: @btf6rm</li>
+                  <li>Tiktok: @lysanderlee</li>
+                </ul>
+              </article>
+
+              <article class="info-card glass-card">
+                <div class="eyebrow">Disclaimer</div>
+                <h3>Catatan penting</h3>
+                <p>
+                  Hasil tes ini tidak dimaksudkan sebagai evaluasi klinis atau alat diagnosis profesional. Untuk kebutuhan
+                  psikologis yang lebih serius, tetap gunakan bantuan profesional yang relevan.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="screen" id="questionScreen" aria-labelledby="questionTitle">
+          <div class="progress-card glass-card">
+            <div class="progress-header">
+              <div>
+                <div class="eyebrow">Progress pengerjaan</div>
+                <h2 class="section-title">Jawab dengan jujur sesuai kebiasaanmu</h2>
+              </div>
+              <div class="progress-counter" id="progressCounter">1 / 56</div>
+            </div>
+            <div class="progress-track" aria-hidden="true">
+              <div class="progress-fill" id="progressFill"></div>
+            </div>
+          </div>
+
+          <div class="question-layout">
+            <aside class="question-sidebar glass-card">
+              <div class="sidebar-section">
+                <span class="sidebar-label">Dimensi aktif</span>
+                <div class="sidebar-pill" id="axisPill">E / I</div>
+              </div>
+
+              <div class="sidebar-section">
+                <span class="sidebar-label">Tips cepat</span>
+                <ul class="tip-list">
+                  <li>Pilih jawaban pertama yang paling terasa natural.</li>
+                  <li>Jangan jawab berdasarkan versi ideal dirimu.</li>
+                  <li>Semua jawaban masih bisa diubah dengan tombol kembali.</li>
+                </ul>
+              </div>
+
+              <div class="sidebar-section response-legend">
+                <span class="sidebar-label">Skala jawaban</span>
+                <div class="legend-stack">
+                  <span>1 · Sangat tidak setuju</span>
+                  <span>2 · Tidak setuju</span>
+                  <span>3 · Netral</span>
+                  <span>4 · Setuju</span>
+                  <span>5 · Sangat setuju</span>
+                </div>
+              </div>
+            </aside>
+
+            <article class="question-card glass-card">
+              <div class="question-meta">
+                <span class="question-badge" id="questionDimensionBadge">Dimensi E / I</span>
+                <span class="question-id" id="questionId">Butir 1</span>
+              </div>
+
+              <h2 class="question-title" id="questionTitle">
+                Saya merasa berenergi setelah banyak berinteraksi dengan orang baru.
+              </h2>
+
+              <p class="question-support" id="questionSupport">
+                Pilih respons yang paling menggambarkan dirimu dalam kondisi sehari-hari.
+              </p>
+
+              <form id="answerForm" class="answer-form">
+                <div class="likert-grid" id="likertGrid" role="radiogroup" aria-labelledby="questionTitle">
+                  <label class="likert-option" data-value="1">
+                    <input type="radio" name="answer" value="1" />
+                    <span class="likert-copy">
+                      <strong>1</strong>
+                      <small>Sangat tidak setuju</small>
+                    </span>
+                  </label>
+
+                  <label class="likert-option" data-value="2">
+                    <input type="radio" name="answer" value="2" />
+                    <span class="likert-copy">
+                      <strong>2</strong>
+                      <small>Tidak setuju</small>
+                    </span>
+                  </label>
+
+                  <label class="likert-option" data-value="3">
+                    <input type="radio" name="answer" value="3" />
+                    <span class="likert-copy">
+                      <strong>3</strong>
+                      <small>Netral</small>
+                    </span>
+                  </label>
+
+                  <label class="likert-option" data-value="4">
+                    <input type="radio" name="answer" value="4" />
+                    <span class="likert-copy">
+                      <strong>4</strong>
+                      <small>Setuju</small>
+                    </span>
+                  </label>
+
+                  <label class="likert-option" data-value="5">
+                    <input type="radio" name="answer" value="5" />
+                    <span class="likert-copy">
+                      <strong>5</strong>
+                      <small>Sangat setuju</small>
+                    </span>
+                  </label>
+                </div>
+              </form>
+
+              <div class="feedback-row" id="feedbackRow" aria-live="polite"></div>
+
+              <div class="question-actions">
+                <button class="ghost-button" id="prevButton" type="button">Sebelumnya</button>
+                <button class="primary-button" id="nextButton" type="button">Lanjut</button>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="screen" id="identityScreen" aria-labelledby="identityTitle">
+          <div class="identity-card glass-card">
+            <div class="identity-copy">
+              <div class="eyebrow">Langkah terakhir</div>
+              <h2 id="identityTitle">Isi identitas singkat untuk personalisasi hasil</h2>
+              <p>
+                Setelah form ini dikirim, hasil akhir akan menampilkan tipe, kecenderungan skor, dan ringkasan interpretasi
+                sesuai nama yang kamu isi.
+              </p>
+            </div>
+
+            <form id="identityForm" class="identity-form">
+              <label class="field-group">
+                <span>Nama</span>
+                <input type="text" id="nameInput" name="name" placeholder="Contoh: Alya Putri" maxlength="40" required />
+              </label>
+
+              <label class="field-group">
+                <span>Jenis kelamin</span>
+                <select id="genderInput" name="gender" required>
+                  <option value="" selected disabled>Pilih salah satu</option>
+                  <option value="Perempuan">Perempuan</option>
+                  <option value="Laki-laki">Laki-laki</option>
+                  <option value="Non-biner">Non-biner</option>
+                  <option value="Memilih untuk tidak menyebutkan">Memilih untuk tidak menyebutkan</option>
+                </select>
+              </label>
+
+              <div class="identity-actions">
+                <button class="ghost-button" id="identityBackButton" type="button">Kembali</button>
+                <button class="primary-button" type="submit">Lihat Hasil</button>
+              </div>
+            </form>
+          </div>
+        </section>
+
+        <section class="screen" id="resultScreen" aria-labelledby="resultTitle">
+          <div class="result-layout">
+            <article class="result-hero glass-card">
+              <div class="result-hero-top">
+                <img src="assets/logo-mark.svg" alt="Logo Persona Grid" class="result-mark" />
+                <span class="panel-badge">Hasil Personal</span>
+              </div>
+
+              <p class="result-greeting" id="resultGreeting">Halo, kamu cenderung bertipe</p>
+              <h2 id="resultTitle" class="result-type">INTJ</h2>
+              <p class="result-archetype" id="resultArchetype">Strategist Visioner</p>
+              <p class="result-summary" id="resultSummary"></p>
+
+              <div class="result-meta">
+                <div class="meta-chip"><span>Nama</span><strong id="resultName">—</strong></div>
+                <div class="meta-chip"><span>Jenis kelamin</span><strong id="resultGender">—</strong></div>
+              </div>
+
+              <div class="result-actions">
+                <button class="primary-button" id="downloadButton" type="button">Cetak / Simpan PDF</button>
+                <button class="ghost-button" id="restartButton" type="button">Ulangi Tes</button>
+              </div>
+            </article>
+
+            <div class="result-stack">
+              <article class="result-card glass-card">
+                <div class="card-head">
+                  <h3>Distribusi skor</h3>
+                  <span class="card-tag">4 Dimensi</span>
+                </div>
+                <div id="scoreBars" class="score-bars"></div>
+              </article>
+
+              <article class="result-card glass-card">
+                <div class="card-head">
+                  <h3>Gaya kerja & komunikasi</h3>
+                  <span class="card-tag">Interpretasi</span>
+                </div>
+                <div class="profile-text">
+                  <div>
+                    <h4>Cara kerja</h4>
+                    <p id="resultWorkStyle"></p>
+                  </div>
+                  <div>
+                    <h4>Cara komunikasi</h4>
+                    <p id="resultCommunication"></p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="result-card glass-card dual-list-card">
+                <div>
+                  <div class="card-head compact-head">
+                    <h3>Kekuatan utama</h3>
+                  </div>
+                  <ul id="strengthList" class="insight-list"></ul>
+                </div>
+                <div>
+                  <div class="card-head compact-head">
+                    <h3>Yang perlu dijaga</h3>
+                  </div>
+                  <ul id="watchoutList" class="insight-list muted"></ul>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="site-section" id="faqSection" aria-labelledby="faqTitle">
+          <div class="faq-wrap glass-card">
+            <div class="eyebrow">FAQ</div>
+            <h2 id="faqTitle" class="section-title">Pertanyaan yang sering ditanyakan</h2>
+
+            <div class="faq-list">
+              <article class="faq-item">
+                <h3>Apakah hasil tes ini akurat?</h3>
+                <p>
+                  Tes ini dirancang sebagai alat refleksi diri untuk membaca kecenderungan personal. Hasilnya bisa membantu
+                  memahami pola diri, tetapi tidak dimaksudkan sebagai diagnosis psikologis resmi.
+                </p>
+              </article>
+
+              <article class="faq-item">
+                <h3>Apakah saya bisa mengulang tes?</h3>
+                <p>
+                  Ya. Kamu bisa mengulang tes kapan saja melalui tombol reset di atas atau tombol ulangi tes di halaman hasil.
+                </p>
+              </article>
+
+              <article class="faq-item">
+                <h3>Apakah jawaban saya disimpan?</h3>
+                <p>
+                  Dalam versi dasar ini, hasil biasanya hanya diproses untuk ditampilkan di browser. Kalau nanti kamu menambahkan
+                  database atau analytics, sebaiknya tampilkan juga kebijakan privasi di website.
+                </p>
+              </article>
+
+              <article class="faq-item">
+                <h3>Untuk siapa tes ini cocok?</h3>
+                <p>
+                  Cocok untuk pelajar, mahasiswa, pekerja, kreator, atau siapa pun yang ingin memahami cara kerja, gaya komunikasi,
+                  dan preferensi personalnya dengan lebih jelas.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <strong>Persona Grid</strong>
+            <p>Tes gaya kepribadian untuk refleksi diri dan eksplorasi personal.</p>
+          </div>
+
+          <div class="footer-links">
+            <a href="#introScreen">Beranda</a>
+            <a href="#aboutSection">Tentang</a>
+            <a href="#faqSection">FAQ</a>
+            <a href="mailto:lysanderlee06@gmail.com">Kontak</a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2026 Persona Grid. All rights reserved.</p>
+          <p>Created by <strong>Lysander Lee</strong>.</p>
+        </div>
+      </footer>
+    </div>
+
+    <template id="scoreBarTemplate">
+      <div class="score-row">
+        <div class="score-topline">
+          <div class="score-label-wrap">
+            <span class="score-code"></span>
+            <strong class="score-label"></strong>
+          </div>
+          <span class="score-caption"></span>
+        </div>
+        <div class="score-scale">
+          <span class="score-edge score-left"></span>
+          <div class="score-track-inner">
+            <div class="score-balance"></div>
+          </div>
+          <span class="score-edge score-right"></span>
+        </div>
+      </div>
+    </template>
+
+    <script src="script.js"></script>
+  </body>
+</html>
